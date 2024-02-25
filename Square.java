@@ -1,4 +1,4 @@
-public class Square extends Shape {
+public class Square extends Shape implements Resizeable {
     // Properties unique to a retangle
     int length, height;
 
@@ -10,6 +10,13 @@ public class Square extends Shape {
         this.height = size;
     }
 
+      // interface Implementation
+      @Override
+      public void resize(int percent) {
+      this.length = this.length * (percent / 100);
+      this.height = this.height * (percent / 100);
+      }
+      
     //Inherited method implimentation
     @Override
     double calculateArea() {

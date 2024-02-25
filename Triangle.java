@@ -1,4 +1,4 @@
-public class Triangle extends Shape {
+public class Triangle extends Shape implements Resizeable{
     // Properties unique to a triangle
     int base;
     int height;
@@ -15,6 +15,16 @@ public class Triangle extends Shape {
         this.b = b;
         this.c = c;
     }
+
+      // interface Implementation
+      @Override
+      public void resize(int percent) {
+      this.base = this.base * (percent / 100);
+      this.height = this.height * (percent / 100);
+      this.a = this.a * (percent / 100);
+      this.b = this.b * (percent / 100);
+      this.c = this.c * (percent / 100);
+      }
 
     //Inherited method implimentation
     @Override
