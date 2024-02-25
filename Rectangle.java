@@ -1,20 +1,32 @@
-public class Rectangle extends Shape {
+public class Rectangle extends Shape implements Resizeable {
     // Properties unique to a retangle
     int length;
     int height;
 
     //The constructor for a rectangle
+    public Rectangle(String name, String color, int length, int height){
+        this.name = name;
+        this.color = color;
+        this.length = length;
+        this.height = height;
+    }
+    // interface Implementation
+    @Override
+    public void resize(int percent) {
+    this.length = this.length * (percent / 100);
+    this.height = this.height * (percent / 100);
+    }
+    
+        
 
     //Inherited method implimentation
     @Override
-    int calculateArea() {
-        // TODO Auto-generated method stub
-        return 0;
+    double calculateArea() {
+        return length * height;
     }
     @Override
-    int calculatePerimeter() {
-        // TODO Auto-generated method stub
-        return 0;
+    double calculatePerimeter() {
+        return (2 * length) + (2 * height);
     }
 
 }

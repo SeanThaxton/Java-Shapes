@@ -2,17 +2,21 @@ public class Square extends Shape {
     // Properties unique to a retangle
     int length, height;
 
-    //The constructor for a rectangle
+    //The constructor for a square
+    public Square(String name, String color, int size){
+        this.name = name;
+        this.color = color;
+        this.length = size;
+        this.height = size;
+    }
 
     //Inherited method implimentation
     @Override
-    int calculateArea() {
-        // TODO Auto-generated method stub
-        return 0;
+    double calculateArea() {
+        return length * height;
     }
     @Override
-    int calculatePerimeter() {
-        // TODO Auto-generated method stub
-        return 0;
+    double calculatePerimeter() {
+        return (2 * length) + (2 * height);
     }
 }

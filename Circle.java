@@ -1,4 +1,4 @@
-public class Circle extends Shape {
+public class Circle extends Shape implements Resizeable {
     // Properties unique to a circle
     int radius;
 
@@ -9,16 +9,19 @@ public class Circle extends Shape {
         this.radius = radius;
 
     }
-
+    // Interface implimentation
+    @Override
+    public void resize(int percent) {
+        this.radius = radius + (radius * percent/100);
+    }
+    
     //Inherited method implimentation
     @Override
-    int calculateArea() {
-        // TODO Auto-generated method stub
-        return 0;
+    double calculateArea() {
+        return 3.14 * (radius * radius);
     }
     @Override
-    int calculatePerimeter() {
-        // TODO Auto-generated method stub
-        return 0;
+    double calculatePerimeter() {
+        return 2 * radius;
     }
 }

@@ -4,7 +4,7 @@ abstract class Shape {
     String color;
 
     //Action that an abstract shape can do
-    abstract int calculateArea();
-    abstract int calculatePerimeter();
+    abstract double calculateArea();
+    abstract double calculatePerimeter();
     
 }
