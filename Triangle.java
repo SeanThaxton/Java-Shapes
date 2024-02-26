@@ -19,11 +19,11 @@ public class Triangle extends Shape implements Resizeable{
       // interface Implementation
       @Override
       public void resize(int percent) {
-      this.base = this.base * (percent / 100);
-      this.height = this.height * (percent / 100);
-      this.a = this.a * (percent / 100);
-      this.b = this.b * (percent / 100);
-      this.c = this.c * (percent / 100);
+      this.base = base + (base * percent / 100);
+      this.height = height +  (height * percent / 100);
+      this.a = a + (a * percent / 100);
+      this.b = b + (b * percent / 100);
+      this.c = c + (c * percent / 100);
       }
 
     //Inherited method implimentation

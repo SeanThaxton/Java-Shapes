@@ -13,8 +13,8 @@ public class Rectangle extends Shape implements Resizeable {
     // interface Implementation
     @Override
     public void resize(int percent) {
-    this.length = this.length * (percent / 100);
-    this.height = this.height * (percent / 100);
+    this.length = length + (length* percent / 100);
+    this.height = height +  (height*percent / 100);
     }
     
         
